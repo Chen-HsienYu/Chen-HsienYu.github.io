@@ -241,13 +241,40 @@
             margin-bottom: 12px;
         }
         
-        .timeline-description {
-            line-height: 1.6;
+        .timeline-description ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
         }
         
         .timeline-description li {
-            margin-bottom: 8px;
-            list-style-position: inside;
+            position: relative;
+            padding-right: 24px;
+            margin-bottom: 12px;
+            text-align: right;
+        }
+        
+        .timeline-description li::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 10px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            margin-left: 12px;
+        }
+
+        .timeline-item.right .timeline-description li {
+            padding-right: 0;
+            padding-left: 24px;
+            text-align: left;
+        }
+
+        .timeline-item.right .timeline-description li::after {
+            right: auto;
+            left: 0;
         }
         
         /* Skills Section */
@@ -487,8 +514,9 @@
                         <p class="timeline-role">Student Assistant (IT Support)</p>
                         <div class="timeline-description">
                             <ul>
-                                <li>Collaborate with department manager to identify website requirements and implement content updates in a timely manner.</li>
-                                <li>Maintain and enhance departmental website by implementing fixes and optimizations to improve functionality and user experience.</li>
+                                <li>Collaborate with department manager to identify website requirements and implement content updates</li>
+                                <li>Maintain and enhance departmental website by implementing fixes and optimizations to improve functionality and user experience</li>
+                                <li>Streamline content management processes resulting in 30% faster update cycles</li>
                             </ul>
                         </div>
                     </div>
@@ -516,7 +544,7 @@
                         <p class="timeline-role">Marathon Timing Assistant</p>
                         <div class="timeline-description">
                             <ul>
-                                <li>Deployed and configured marathon timing hardware systems to ensure accurate runner tracking and data collection.</li>
+                                <li>Deployed and configured marathon timing hardware systems to ensure accurate data collection.</li>
                                 <li>Executed data validation procedures to verify accurate recording of runner crossing times and race statistics.</li>
                                 <li>Demonstrated proficiency in enterprise-grade athletic event timing technologies, including MyLaps and IPICO systems.</li>
                             </ul>
